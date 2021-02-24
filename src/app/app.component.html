@@ -1,0 +1,27 @@
+<h2>Lista zadań</h2>
+
+<div>
+  
+  <div>
+    Nowe zadanie
+  </div>
+
+  <div>
+   <input [(ngModel)]="newTask">
+   <button (click)="add()">+</button>
+ 
+  </div>
+  
+  <div>
+    <ul>
+      <li *ngFor='let task of taskList'>
+
+        {{task}}
+        <button (click)="remove(task)"> x</button>
+      </li>
+    </ul>
+  </div>
+
+
+
+</div>
